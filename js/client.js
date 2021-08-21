@@ -3,16 +3,11 @@ const socket = io('http://localhost:8000');
 var audio = new Audio('ringtone.mp3');
 
 const append = (message, position) => {
-    const messageElement = document.createElement('div');
-    messageElement.innerText = message;
-    messageElement.classList.add('message');
-    messageElement.classList.add(position);
-    $('.container').append(messageElement);
+    $('.container').append(`<div class="message ${position}">${message}</div>`);
     if (position == 'left') {
         audio.play();
     }
 }
-
 
 $('#send-container').submit((e) => {
     e.preventDefault();
@@ -36,3 +31,11 @@ socket.on('receive', data => {
 socket.on('left', name => {
     append(`${name} left the chat`, 'left');
 });
+
+
+
+
+/*const messageElement = document.createElement('div');
+messageElement.innerText = message;
+messageElement.classList.add('message');
+messageElement.classList.add(position);*/
