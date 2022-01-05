@@ -1,7 +1,7 @@
 <h1 align="center">Nodejs-TheChatApp</h1>
 <a href="#">
   <div align="center" >
-    <img src="chat.jpg" width='400' height = '500'/>
+    <img src="chat.png" width='400' height = '500'/>
   </div>
 </a>
 
